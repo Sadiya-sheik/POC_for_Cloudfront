@@ -1,5 +1,5 @@
 {
-  "name": "cdk-cra-static",
+  "name": "cdk-cra-static/cdk_app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
