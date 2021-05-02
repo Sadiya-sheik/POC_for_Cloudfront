@@ -58,7 +58,7 @@ jobs:
           npm run build
           cdk synth
           cdk bootstrap
-          cdk deploy CdkAppStack ---require-approval never
-          #cdk deploy --app ./cdk_app/cdk.out --require-approval never "*"
+          #cdk deploy CdkAppStack ---require-approval never
+          cdk deploy --app ./cdk_app/cdk.out --require-approval never "*"
           #cdk destroy
         working-directory: ${{env.working-directory}}

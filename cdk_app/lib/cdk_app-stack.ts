@@ -19,7 +19,7 @@ export class CdkAppStack extends cdk.Stack {
     const src = new s3Deploy.BucketDeployment(this, "DeployCRA", {
       sources: [s3Deploy.Source.asset("../build")],
       destinationBucket: bucket
-    });@aws-cdk/aws-s3 @aws-cdk/aws-s3-deployment @aws-cdk/aws-cloudfront
+    });
 
     // Cloudfront
     const cf = new cloudfront.CloudFrontWebDistribution(this, "CDKCRAStaticDistribution", {
