@@ -17,6 +17,8 @@ on:
 jobs:
   Cleanup: 
     runs-on: ubuntu-latest
+    env:
+       working-directory: ./cdk_app/
     steps:
       - name: Runner workspace path
         run: |
@@ -56,6 +58,7 @@ jobs:
           npm run build
           cdk synth
           cdk bootstrap
-          #cdk deploy CdkServerlessGetStartedStack ---require-approval never
-          cdk deploy --app ./cdk_app/cdk.out --require-approval never "*"
+          cdk deploy CdkServerlessGetStartedStack ---require-approval never
+          #cdk deploy --app ./cdk_app/cdk.out --require-approval never "*"
           #cdk destroy
+        working-directory: ${{env.working-directory}}
